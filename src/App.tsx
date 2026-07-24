@@ -146,8 +146,8 @@ function App() {
               <li><strong>Đảm bảo sức khoẻ:</strong> Tuyệt đối tuân thủ "Khoảng cách nghỉ tối thiểu" giữa 2 ca trực. Nếu bế tắc (do quá ít người), máy tính sẽ tự động nới lỏng dần khoảng cách này xuống thay vì xếp bừa.</li>
               <li><strong>Quét 3 vòng:</strong> Máy tính sẽ ưu tiên xếp hết Ca Cực, rồi đến Ca Ngày T7/CN, cuối cùng mới xếp Ca Thường.</li>
               <li><strong>Hệ số tính điểm:</strong> 
-                <br/>• 1 Ca cực (Tối T6, T7, CN) = <strong>1.3 điểm</strong>
-                <br/>• 1 Ca ngày T7/CN = <strong>1.2 điểm</strong>
+                <br/>• 1 Ca cực (Tối T6, T7, CN) = <strong>1.2 điểm</strong>
+                <br/>• 1 Ca ngày T7/CN = <strong>1.1 điểm</strong>
                 <br/>• 1 Ca thường = <strong>1.0 điểm</strong>
               </li>
               <li><strong>Bù trừ công bằng:</strong> Khi xếp ca, người có <strong>Điểm vất vả thấp nhất</strong> sẽ bị gọi đi trực. Nhờ đó, người phải trực nhiều Ca Cực sẽ nhanh chóng "đầy điểm" và được tự động <strong>giảm bớt số buổi trực thường</strong> so với người khác.</li>
@@ -251,8 +251,8 @@ function App() {
                   const totalA = sA.hard + sA.weekendDay + sA.normal;
                   const totalB = sB.hard + sB.weekendDay + sB.normal;
                   if (totalA !== totalB) return totalB - totalA;
-                  const ptsA = sA.hard * 1.3 + sA.weekendDay * 1.2 + sA.normal;
-                  const ptsB = sB.hard * 1.3 + sB.weekendDay * 1.2 + sB.normal;
+                  const ptsA = sA.hard * 1.2 + sA.weekendDay * 1.1 + sA.normal;
+                  const ptsB = sB.hard * 1.2 + sB.weekendDay * 1.1 + sB.normal;
                   return ptsB - ptsA;
                 }).map(m => {
                   const s = scheduleResult.stats![m.id];
@@ -264,8 +264,8 @@ function App() {
                         <span style={{ fontWeight: 'bold', backgroundColor: 'var(--primary-color)', color: 'white', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem' }}>
                           Tổng ca: {s.hard + s.weekendDay + s.normal}
                         </span>
-                        <span style={{ fontWeight: 'bold', backgroundColor: '#f59e0b', color: 'white', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', marginLeft: '0.25rem' }} title="Hệ số: Ca cực x1.3, T7/CN x1.2, Ca thường x1">
-                          Điểm: {(s.hard * 1.3 + s.weekendDay * 1.2 + s.normal).toFixed(1)}
+                        <span style={{ fontWeight: 'bold', backgroundColor: '#f59e0b', color: 'white', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem', marginLeft: '0.25rem' }} title="Hệ số: Ca cực x1.2, T7/CN x1.1, Ca thường x1">
+                          Điểm: {(s.hard * 1.2 + s.weekendDay * 1.1 + s.normal).toFixed(1)}
                         </span>
                       </div>
                       <div style={{ color: 'var(--danger-color)', marginTop: '0.5rem' }}>Ca cực (tối T6, T7, CN): {s.hard}</div>
