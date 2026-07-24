@@ -1,0 +1,30 @@
+{
+  "name": "chia-truc",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/react-datepicker": "^6.2.0",
+    "date-fns": "^4.4.0",
+    "exceljs": "^4.4.0",
+    "lucide-react": "^1.26.0",
+    "react": "^19.2.7",
+    "react-datepicker": "^9.1.0",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.3.3",
+    "oxlint": "^1.71.0",
+    "typescript": "~6.0.2",
+    "vite": "^5.4.11"
+  }
+}
