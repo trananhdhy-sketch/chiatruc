@@ -20,8 +20,8 @@ import './index.css';
 
 function App() {
   const [departmentName, setDepartmentName] = useState('C1');
-  const [startDate, setStartDate] = useState<Date>(new Date());
-  const [endDate, setEndDate] = useState<Date>(addDays(new Date(), 14));
+  const [startDate, setStartDate] = useState<Date>(new Date(2026, 6, 27)); // 27/07/2026 (Month is 0-indexed)
+  const [endDate, setEndDate] = useState<Date>(new Date(2026, 7, 30)); // 30/08/2026
   const [minRestShifts, setMinRestShifts] = useState<number | ''>(3);
   
   const [members, setMembers] = useState<Member[]>([]);
