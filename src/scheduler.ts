@@ -78,7 +78,7 @@ export function generateSchedule(
   });
 
   const getPoints = (stats: { hard: number; weekendDay: number; normal: number }) => {
-    return stats.hard * 1.5 + stats.weekendDay * 1.2 + stats.normal * 1.0;
+    return stats.hard * 1.3 + stats.weekendDay * 1.2 + stats.normal * 1.0;
   };
 
   const getAvailableMembers = (targetIndex: number, restThreshold: number) => {
