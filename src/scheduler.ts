@@ -1,4 +1,4 @@
-import { eachDayOfInterval, isWeekend, getDay } from 'date-fns';
+import { eachDayOfInterval, getDay } from 'date-fns';
 
 export interface Member {
   id: string;
